@@ -8,7 +8,7 @@ function Pokedex() {
   const fetchPokemons = async () => {
     try {
       setLoading(true);
-      const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=150');
+      const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
       if (!response.ok) throw new Error('Failed to fetch Pokémon list');
       const data = await response.json();
       setPokemons(data.results);
